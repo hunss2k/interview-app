@@ -1,0 +1,35 @@
+{
+  "name": "ccfm-interview",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "setup-notion": "tsx scripts/setup-notion.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30",
+    "@notionhq/client": "^2",
+    "@vercel/blob": "^0.23",
+    "date-fns": "^3",
+    "next": "^14",
+    "openai": "^4",
+    "react": "^18",
+    "react-dom": "^18",
+    "telegraf": "^4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "^14",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "tsx": "^4",
+    "typescript": "^5"
+  }
+}
