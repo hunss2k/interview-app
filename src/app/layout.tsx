@@ -4,7 +4,7 @@ import './globals.css';
 import TabNavigation from '@/components/TabNavigation';
 
 export const metadata: Metadata = {
-  title: 'CCFM 면담 관리',
+  title: '45스페이스 최훈식 회의록관리',
   description: '면담 녹음 · AI 요약 · 자동 기록',
   manifest: '/manifest.json',
 };
@@ -14,7 +14,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-  themeColor: '#3b82f6',
+  themeColor: '#1d4ed8',
 };
 
 export default function RootLayout({
@@ -28,8 +28,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
       </head>
-      <body className="min-h-screen">
+      <body className="min-h-screen" style={{ fontFamily: "'Pretendard', sans-serif" }}>
         <main className="pb-20 max-w-lg mx-auto">
           {children}
         </main>
