@@ -193,7 +193,7 @@ export default function PersonDetail({ personType }: PersonDetailProps) {
   };
 
   const isLeader = personType === 'leader';
-  const typeLabel = isLeader ? '직원' : '광고주';
+  const typeLabel = isLeader ? '직원' : '대외미팅';
   const recordLabel = isLeader ? '면담 기록' : '소통 기록';
   const emptyTitle = isLeader ? '면담 기록이 없습니다' : '소통 기록이 없습니다';
   const emptyDesc = isLeader ? '녹음 탭에서 면담을 진행해보세요' : '녹음 탭에서 미팅을 진행해보세요';

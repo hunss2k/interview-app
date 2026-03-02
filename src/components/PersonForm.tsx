@@ -59,7 +59,7 @@ export default function PersonForm({
     }
   };
 
-  const typeLabel = type === '팀장' ? '직원' : '광고주';
+  const typeLabel = type === '팀장' ? '직원' : '대외미팅';
   const deptLabel = type === '팀장' ? '부서' : '회사명';
 
   return (

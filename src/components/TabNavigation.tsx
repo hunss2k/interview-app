@@ -8,7 +8,7 @@ const tabs = [
   { href: '/', icon: '🏠', label: '홈' },
   { href: '/interview', icon: '🎙️', label: '녹음' },
   { href: '/leaders', icon: '👥', label: '팀장' },
-  { href: '/clients', icon: '🏢', label: '광고주' },
+  { href: '/clients', icon: '🏢', label: '대외미팅' },
 ];
 
 export default function TabNavigation() {

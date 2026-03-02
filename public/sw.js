@@ -1,4 +1,4 @@
-// CCFM 면담 관리 Service Worker
+// 45SPACE 회의록 관리 Service Worker
 const CACHE_NAME = 'ccfm-v1';
 const STATIC_ASSETS = ['/', '/interview', '/leaders', '/clients'];
 

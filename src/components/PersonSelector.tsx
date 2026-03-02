@@ -100,7 +100,7 @@ export default function PersonSelector({ isOpen, onSelect, onClose }: PersonSele
                   }
                 `}
               >
-                {t === '팀장' ? '직원' : '광고주'}
+                {t === '팀장' ? '직원' : '대외미팅'}
               </button>
             ))}
           </div>
@@ -171,7 +171,7 @@ export default function PersonSelector({ isOpen, onSelect, onClose }: PersonSele
                 transition-colors
               "
             >
-              + {tab === '팀장' ? '직원' : '광고주'} 추가하기
+              + {tab === '팀장' ? '직원' : '대외미팅'} 추가하기
             </button>
           </div>
         </div>

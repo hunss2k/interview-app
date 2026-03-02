@@ -57,7 +57,7 @@ async function handleListCommand(): Promise<string> {
 
   let msg = '👥 팀장 목록:\n';
   leaders.forEach((p) => { msg += `  • ${p.name} (${p.department})\n`; });
-  msg += `\n🏢 광고주 목록:\n`;
+  msg += `\n🏢 대외미팅 목록:\n`;
   clients.forEach((p) => { msg += `  • ${p.name} (${p.department})\n`; });
 
   return msg || '등록된 인원이 없습니다.';
@@ -77,7 +77,7 @@ async function handleRecentCommand(): Promise<string> {
 }
 
 function getHelpText(): string {
-  return `CCFM 면담 관리 봇 🤖\n\n명령어:\n/질문 [이름] - 다음 면담 추천 질문\n/요약 [이름] - 최근 면담 요약\n/목록 - 활성 인원 리스트\n/최근 - 최근 5개 면담`;
+  return `45SPACE 회의록 관리 봇 🤖\n\n명령어:\n/질문 [이름] - 다음 면담 추천 질문\n/요약 [이름] - 최근 면담 요약\n/목록 - 활성 인원 리스트\n/최근 - 최근 5개 면담`;
 }
 
 /**

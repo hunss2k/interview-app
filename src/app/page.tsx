@@ -25,7 +25,7 @@ export default function HomePage() {
     <div className="px-4 pt-6">
       {/* 헤더 */}
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-white">CCFM 면담 관리</h1>
+        <h1 className="text-2xl font-bold text-white">45SPACE 회의록 관리</h1>
         <p className="text-sm text-slate-400 mt-1">녹음 · AI 요약 · 자동 기록</p>
       </div>
 

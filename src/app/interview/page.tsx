@@ -413,7 +413,7 @@ export default function InterviewPage() {
 
   return (
     <div className="px-4 pt-6">
-      <h1 className="text-xl font-bold text-white text-center mb-2">면담 녹음</h1>
+      <h1 className="text-xl font-bold text-white text-center mb-2">회의록 녹음</h1>
 
       {/* 모드 토글 */}
       <div className="flex justify-center gap-2 mb-8">

@@ -51,7 +51,7 @@ export default function ClientsPage() {
   return (
     <div className="px-4 pt-6">
       <div className="flex items-center justify-between mb-4">
-        <h1 className="text-xl font-bold text-white">광고주 관리</h1>
+        <h1 className="text-xl font-bold text-white">대외미팅 관리</h1>
         <button
           onClick={() => setShowForm(true)}
           className="
@@ -72,8 +72,8 @@ export default function ClientsPage() {
       ) : persons.length === 0 ? (
         <EmptyState
           icon="🏢"
-          title="등록된 광고주가 없습니다"
-          description="추가 버튼을 눌러 광고주를 등록하세요"
+          title="등록된 대외미팅 대상이 없습니다"
+          description="추가 버튼을 눌러 대외미팅 대상을 등록하세요"
         />
       ) : (
         <div className="space-y-3">
