@@ -23,7 +23,7 @@ export async function getPersons(type?: PersonType): Promise<Person[]> {
 }
 
 export async function getActivePerson(type?: PersonType): Promise<Person[]> {
-  const activeStatuses = type === '광고주'
+  const activeStatuses = type === '대외미팅'
     ? ['거래중']
     : type
       ? ['재직']
@@ -59,7 +59,7 @@ export async function createPerson(data: {
   rank?: PersonRank | '';
   department: string;
 }): Promise<Person> {
-  const status = data.type === '광고주' ? '거래중' : '재직';
+  const status = data.type === '대외미팅' ? '거래중' : '재직';
   const properties: any = {
     이름: { title: [{ text: { content: data.name } }] },
     유형: { select: { name: data.type } },

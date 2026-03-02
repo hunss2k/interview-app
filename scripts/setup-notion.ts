@@ -43,7 +43,9 @@ async function createPersonsDB() {
         select: {
           options: [
             { name: '팀장', color: 'blue' },
-            { name: '광고주', color: 'green' },
+            { name: '팀원', color: 'purple' },
+            { name: '대외미팅', color: 'green' },
+            { name: '임원', color: 'yellow' },
           ],
         },
       },
@@ -52,7 +54,7 @@ async function createPersonsDB() {
         select: {
           options: [
             { name: '재직', color: 'green' },
-            { name: '퇴사', color: 'red' },
+            { name: '퇴직', color: 'red' },
             { name: '거래중', color: 'blue' },
             { name: '거래종료', color: 'gray' },
           ],
@@ -90,7 +92,7 @@ async function createInterviewsDB(personsDbId: string) {
         select: {
           options: [
             { name: '1:1 면담', color: 'blue' },
-            { name: '광고주 미팅', color: 'green' },
+            { name: '대외미팅', color: 'green' },
           ],
         },
       },

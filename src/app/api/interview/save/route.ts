@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
 
     const person = await getPerson(personId);
     const dateStr = format(new Date(), 'yyyy-MM-dd');
-    const interviewType = person.type === '광고주' ? '광고주 미팅' : '1:1 면담';
+    const interviewType = person.type === '대외미팅' ? '대외미팅' : '1:1 면담';
 
     const { url: notionUrl } = await createInterview({
       personId,

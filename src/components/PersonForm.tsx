@@ -13,7 +13,7 @@ interface PersonFormProps {
   error?: string | null;
 }
 
-const RANKS: PersonRank[] = ['본부장', '부팀장', '팀장', '사원'];
+const RANKS: PersonRank[] = ['사원', '주임', '대리', '과장', '차장', '부장'];
 
 export default function PersonForm({
   isOpen,
@@ -42,7 +42,7 @@ export default function PersonForm({
       const result = await onSubmit({
         name: name.trim(),
         type,
-        rank: type === '팀장' ? rank : '',
+        rank: type !== '대외미팅' ? rank : '',
         department: department.trim(),
       });
       if (result.ok) {
@@ -59,8 +59,8 @@ export default function PersonForm({
     }
   };
 
-  const typeLabel = type === '팀장' ? '직원' : '대외미팅';
-  const deptLabel = type === '팀장' ? '부서' : '회사명';
+  const typeLabel = type !== '대외미팅' ? '직원' : '대외미팅';
+  const deptLabel = type !== '대외미팅' ? '부서' : '회사명';
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60">
@@ -86,7 +86,7 @@ export default function PersonForm({
             />
           </div>
 
-          {type === '팀장' && (
+          {type !== '대외미팅' && (
             <div>
               <label className="block text-sm text-slate-400 mb-1">직급</label>
               <div className="flex gap-2">

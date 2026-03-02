@@ -10,9 +10,9 @@ function buildSystemPrompt(context?: AnalysisContext): string {
   const ceoName = context?.ceoName || '최재명 대표';
   const counterpartName = context?.counterpartName || '상대방';
   const counterpartType = context?.counterpartType || '';
-  const typeHint = counterpartType === '광고주'
-    ? '이 녹취록은 **광고주/고객사 미팅**입니다. 상대방의 의도와 방향성을 파악하고, 원하는 것을 정확히 읽어내는 것이 핵심입니다.'
-    : '이 녹취록은 **팀장/직원 면담**입니다. 조직원의 심리를 파악하고 케어하는 것이 핵심입니다.';
+  const typeHint = counterpartType === '대외미팅'
+    ? '이 녹취록은 **대외미팅/고객사 미팅**입니다. 상대방의 의도와 방향성을 파악하고, 원하는 것을 정확히 읽어내는 것이 핵심입니다.'
+    : '이 녹취록은 **팀 내부 면담**입니다. 조직원의 심리를 파악하고 케어하는 것이 핵심입니다.';
 
   return `당신은 CEO 직속 면담 분석 전문가입니다. 녹취록을 분석하여 CEO의 의사결정을 돕는 실질적 인사이트를 제공합니다.
 

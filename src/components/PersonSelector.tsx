@@ -14,7 +14,7 @@ interface PersonSelectorProps {
 
 export default function PersonSelector({ isOpen, onSelect, onClose }: PersonSelectorProps) {
   const [persons, setPersons] = useState<Person[]>([]);
-  const [tab, setTab] = useState<PersonType>('팀장');
+  const [tab, setTab] = useState<'직원' | '대외미팅'>('직원');
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(false);
   const [showAddForm, setShowAddForm] = useState(false);
@@ -67,7 +67,7 @@ export default function PersonSelector({ isOpen, onSelect, onClose }: PersonSele
   if (!isOpen) return null;
 
   const filtered = persons
-    .filter((p) => p.type === tab)
+    .filter((p) => tab === '대외미팅' ? p.type === '대외미팅' : p.type !== '대외미팅')
     .filter((p) => p.name.includes(search) || p.department.includes(search));
 
   return (
@@ -88,7 +88,7 @@ export default function PersonSelector({ isOpen, onSelect, onClose }: PersonSele
 
           {/* 탭 */}
           <div className="flex border-b border-slate-700">
-            {(['팀장', '광고주'] as PersonType[]).map((t) => (
+            {(['직원', '대외미팅'] as const).map((t) => (
               <button
                 key={t}
                 onClick={() => setTab(t)}
@@ -100,7 +100,7 @@ export default function PersonSelector({ isOpen, onSelect, onClose }: PersonSele
                   }
                 `}
               >
-                {t === '팀장' ? '직원' : '대외미팅'}
+                {t}
               </button>
             ))}
           </div>
@@ -171,7 +171,7 @@ export default function PersonSelector({ isOpen, onSelect, onClose }: PersonSele
                 transition-colors
               "
             >
-              + {tab === '팀장' ? '직원' : '대외미팅'} 추가하기
+              + {tab} 추가하기
             </button>
           </div>
         </div>
@@ -181,7 +181,7 @@ export default function PersonSelector({ isOpen, onSelect, onClose }: PersonSele
       {showAddForm && typeof document !== 'undefined' && createPortal(
         <PersonForm
           isOpen={showAddForm}
-          type={tab}
+          type={tab === '대외미팅' ? '대외미팅' : '팀장'}
           onSubmit={handleAddPerson}
           onClose={() => { setShowAddForm(false); setAddError(null); }}
           error={addError}

@@ -54,8 +54,8 @@ export default function HomePage() {
                 key={iv.id}
                 interview={iv}
                 onClick={() => {
-                  const type = iv.type === '1:1 면담' ? 'leaders' : 'clients';
-                  window.location.href = `/${type}/${iv.personId}`;
+                  const route = iv.type === '1:1 면담' ? 'leaders' : 'clients';
+                  window.location.href = `/${route}/${iv.personId}`;
                 }}
               />
             ))}

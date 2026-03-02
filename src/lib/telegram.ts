@@ -52,10 +52,10 @@ async function handleSummaryCommand(name: string): Promise<string> {
 
 async function handleListCommand(): Promise<string> {
   const persons = await getPersons();
-  const leaders = persons.filter((p) => p.type === '팀장' && p.status === '재직');
-  const clients = persons.filter((p) => p.type === '광고주' && p.status === '거래중');
+  const leaders = persons.filter((p) => p.type !== '대외미팅' && p.status === '재직');
+  const clients = persons.filter((p) => p.type === '대외미팅' && p.status === '거래중');
 
-  let msg = '👥 팀장 목록:\n';
+  let msg = '👥 직원 목록:\n';
   leaders.forEach((p) => { msg += `  • ${p.name} (${p.department})\n`; });
   msg += `\n🏢 대외미팅 목록:\n`;
   clients.forEach((p) => { msg += `  • ${p.name} (${p.department})\n`; });

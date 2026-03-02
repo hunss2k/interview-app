@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
     const analysis = await analyzeTranscript(transcript);
 
     // Step 4: 면담 유형 결정
-    const interviewType = person.type === '광고주' ? '광고주 미팅' : '1:1 면담';
+    const interviewType = person.type === '대외미팅' ? '대외미팅' : '1:1 면담';
 
     // Step 5: Notion에 면담 기록 저장
     const { url: notionUrl } = await createInterview({

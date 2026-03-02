@@ -16,7 +16,7 @@ export default function ClientsPage() {
 
   const loadPersons = () => {
     setLoading(true);
-    fetch('/api/persons?type=광고주')
+    fetch('/api/persons?type=대외미팅')
       .then((r) => r.json())
       .then((data) => {
         if (Array.isArray(data)) setPersons(data);
@@ -109,7 +109,7 @@ export default function ClientsPage() {
 
       <PersonForm
         isOpen={showForm}
-        type="광고주"
+        type="대외미팅"
         onSubmit={handleAdd}
         onClose={() => setShowForm(false)}
       />
